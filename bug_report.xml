@@ -1,1 +1,15 @@
 
+<?xml version="1.0" encoding="UTF-8"?>
+          <bug_report>
+                <id>1</id>
+                <summary>В поле "Where to search" не вводится более 10 символов</summary>
+                <description>В поле "Where to search" нет возможности ввести путь файла, который состоит из более 10 символов</description>
+                <expected_result>В поле "Where to search" указываем начальный каталог или набор каталогов FS на неограниченную глубину вложенности</expected_result>
+                <actual_result>В поле "Where to search" не можем указать начальный каталог или набор каталогов FS на неограниченную глубину вложенности</actual_result>
+                <requirements>3пункт</requirements>
+                <steps_to_reproduce>1.Запустить приложение 2.В поле "Where to search" ввести путь файла, состоящий из более 10 символов</steps_to_reproduce>
+                <symptom>Missing feature</symptom>
+                <severity>critical</severity>
+                <priority>ASAP</priority>
+                <attachments>-</attachments>
+          </bug_report>
