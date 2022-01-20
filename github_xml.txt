@@ -1,0 +1,111 @@
+1. Создать внешний репозиторий c названием XML.
+    *click "new"
+    *enter repository name "JSON"
+    *click "create repository"
+
+2. Клонировать репозиторий XML на локальный компьютер.
+    *git clone https://github.com/julija2202/XML.git
+
+3. Внутри локального XML создать файл “new.xml”.
+    *touch new.xml
+
+4. Добавить файл под гит.
+    *git status
+    *git add new.xml
+    *git status
+
+5. Закоммитить файл.
+    *git commit -m "add new.xml"
+
+6. Отправить файл на внешний GitHub репозиторий.
+    *git push
+
+7. Отредактировать содержание файла “new.xml” - написать информацию о себе (ФИО, возраст, количество домашних животных, будущая желаемая зарплата). Всё написать в формате XML.
+    *cat > new.xml
+         <?xml version="1.0" encoding="UTF-8"?>
+            <INFORMATION>
+               <ФИО>Яголович Юлия Валерьевна</ФИО>
+               <Возраст>34</Возраст>
+               <Количество_домашних_животных>1</Количество_домашних_животных>
+               <Будущая_желаемая_зарплата>450$</Будущая_желаемая_зарплата>
+            </INFORMATION>
+    *ctrl+c
+
+8. Отправить изменения на внешний репозиторий.
+    *git add new.xml
+    *git commit -m "edit new.xml"
+    *git push
+
+9. Создать файл preferences.xml
+    *touch preferances.xml
+
+10. В файл preferences.xml добавить информацию о своих предпочтениях (Любимый фильм, любимый сериал, любимая еда, любимое время года, сторона которую хотели бы посетить) в формате XML.
+     *cat > preferances.xml
+         <?xml version="1.0" encoding="UTF-8"?>
+            <PREFERANCES>
+              <Любимый_фильм>1000 cлов</Любимый_фильм>
+              <Любимый_сериал>Отчаянные домохозяйки</Любимый сериал>
+              <Любимая_еда>Драники</Любимая_еда>
+              <Любимое_время_года>Лето</Любимое_время_года>
+              <Страна_которую_хочу_посесить>Америка</Страна_которую_хочу_посетить>
+            </PREFERANCES>
+     *ctrl+c
+
+11. Создать файл sklls.xml добавить информацию о скиллах которые будут изучены на курсе в формате XML
+     *touch skills.xml
+     *cat > skills.xml
+        <?xml version="1.0" encoding="UTF-8"?>
+          <skills>
+             <терминал>Git bash</терминал>
+             <система управления версиями>GIT</система управления версиями>
+             <базы данных>SQL</базы данных>
+             <тестирование_API>POSTMAN</тестирование_API>
+             <мобильное_тестирование>ANDROID STUDIO</мобильное_тестирование>
+             <сниффинг_трафика>Charles, Fiddler</сниффинг_трафика>
+          </skills>
+     *ctrl+c
+
+12. Сделать коммит в одну строку.
+     *git add skills.xml preferances.xml
+     *git status
+     *git commit -m "add 2 file"
+
+
+13. Отправить сразу 2 файла на внешний репозиторий.
+     *git push
+
+14. На веб интерфейсе создать файл bug_report.xml.
+     *add file
+     *create new file
+     *enter file name "bug_report.xml"
+
+15. Сделать Commit changes (сохранить) изменения на веб интерфейсе.
+     *click "commit new file"
+
+16. На веб интерфейсе модифицировать файл bug_report.xml, добавить баг репорт в формате XML.
+     *click file "bug_report"
+     *click "edit this file"
+     *enter
+         <?xml version="1.0" encoding="UTF-8"?>
+          <bug_report>
+                <id>1</id>
+                <summary>В поле "Where to search" не вводится более 10 символов</summary>
+                <description>В поле "Where to search" нет возможности ввести путь файла, который состоит из более 10 символов</description>
+                <expected_result>В поле "Where to search" указываем начальный каталог или набор каталогов FS на неограниченную глубину вложенности</expected_result>
+                <actual_result>В поле "Where to search" не можем указать начальный каталог или набор каталогов FS на неограниченную глубину вложенности</actual_result>
+                <requirements>3пункт</requirements>
+                <steps_to_reproduce>1.Запустить приложение 2.В поле "Where to search" ввести путь файла, состоящий из более 10 символов</steps_to_reproduce>
+                <symptom>Missing feature</symptom>
+                <severity>critical</severity>
+                <priority>ASAP</priority>
+                <attachments>-</attachments>
+          </bug_report>
+
+17. Сделать Commit changes (сохранить) изменения на веб интерфейсе.
+     *enter in  "add an optional extended description" - "edit bug_report"
+     *click "commit changes"
+
+18. Синхронизировать внешний и локальный репозиторий XML
+     *cd XML
+     *git fetch
+     *git pull
